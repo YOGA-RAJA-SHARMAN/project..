@@ -1,0 +1,119 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="inner">
+        <input type="text" [(ngModel)]="filters" placeholder="Search employee" class="input" aria-label="Number" />
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row row-cols-9">
+        <div class="col-5 m-6" *ngFor="let item of employee5 | search1 : filters">
+          <div class="mcard">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <mat-card-title-group>
+                  <mat-card-title>{{ item.name }}</mat-card-title>
+                  <mat-card-subtitle> {{item.designation}}</mat-card-subtitle>
+                  <img mat-card-sm-image src={{item.imageurl}} alt="img"/>
+                </mat-card-title-group>
+              </mat-card-header>
+              <mat-card-content>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="cardComp col-4" *ngFor="let item of employee1 | search1 : filters">
+            <div class="mcard">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title-group>
+                    <mat-card-title>{{ item.name }}</mat-card-title>
+                    <mat-card-subtitle> {{item.designation}}</mat-card-subtitle>
+                    <img mat-card-sm-image src={{item.imageurl}} alt="img"/>
+                  </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content> {{ item.manager }}</mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        <form [formGroup]="form">
+        <div cdkDropListGroup>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="mcard">
+                <div class="example-container">
+                  <div cdkDropList [cdkDropListData]="employee2" class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of employee2 | search1 : filters" cdkDrag>
+                      <mat-card class="example-card">
+                        <mat-card-header>
+                          <mat-card-title-group>
+                            <mat-card-title>{{ item.name }}</mat-card-title>
+                            <mat-card-subtitle>{{
+                              item.designation
+                              }}</mat-card-subtitle>
+                            <img mat-card-sm-image src="{{ item.imageurl }}" alt="img"/>
+                          </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-content>{{ item.manager }} </mat-card-content>
+                      </mat-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="mcard">
+                <div class="example-container">
+                  <div cdkDropList [cdkDropListData]="employee3" class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of employee3 | search1 : filters" cdkDrag>
+                      <mat-card class="example-card">
+                        <mat-card-header>
+                          <mat-card-title-group>
+                            <mat-card-title>{{ item.name }}</mat-card-title>
+                            <mat-card-subtitle>{{
+                              item.designation
+                              }}</mat-card-subtitle>
+                            <img mat-card-sm-image src="{{ item.imageurl }}"alt="img" />
+                          </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-content>{{ item.manager }} </mat-card-content>
+                      </mat-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mcard">
+                <div class="example-container">
+                  <div cdkDropList [cdkDropListData]="employee4" class="example-list" (cdkDropListDropped)="drop($event)">
+                    <div class="example-box" *ngFor="let item of employee4 | search1 : filters" cdkDrag>
+                      <mat-card class="example-card">
+                        <mat-card-header>
+                          <mat-card-title-group>
+                            <mat-card-title>{{ item.name }}</mat-card-title>
+                            <mat-card-subtitle>{{
+                              item.designation
+                              }}</mat-card-subtitle>
+                            <img mat-card-sm-image src="{{ item.imageurl }}"alt="img" />
+                          </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-content>{{ item.manager }} </mat-card-content>
+                      </mat-card>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.container{
+   background-image:linear-gradient(120deg,#ffc289,#b2d4cc);
+   width: 100%;
+   padding: 2px;
+   border-radius: 30px 30px 30px 30px;
+   border-left: 3px solid #ffc289;
+}
+.head{
+    color: linear-gradient(120deg,#23c2c2,#349ac9);
+    text-align: center;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+}
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+  }

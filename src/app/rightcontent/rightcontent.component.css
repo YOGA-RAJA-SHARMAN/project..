@@ -1,0 +1,126 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+.inner{
+  background:linear-gradient(120deg,#ffc289,#ffd88f);
+  height:100px;
+  border: 3px solid #ffd88f;
+}
+.example-form{
+  text-align: center;
+}
+input, textarea{
+  margin-top:20px;
+
+}
+.col-5{
+  height: 150px;
+margin-left: 270px;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+.mat-mdc-card-content{
+  padding: 16px 16px;
+}
+
+/* drag and drop */
+.example-container {
+  width: 400px;
+  max-width: 100%;
+  height: 300px;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.example-list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: block;
+}
+
+.example-box {
+
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  width:100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  font-size: 14px;
+}
+.example-box:hover{
+  pointer-events: painted;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.col-md-3{
+  padding-left: calc(var(--bs-gutter-x) * 0);
+}
+.input {
+  border: 2px solid #000000;
+  background-image: linear-gradient(120deg,#6e8882,#87889e);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 7px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  transition: all 0.5s;
+  max-width: 170px;
+  margin-left:70px;
+ }
+ 
+ .input:focus {
+  outline-color: rgb(127, 170, 170);
+ }
+
+.cardComp{
+  display:grid;
+}
+.select{
+  width:75%;
+  height:5%;
+}
+.dropselect{
+  color:black;
+  background-color:white;
+  font-size:20px;
+}
+.container-fluid{
+  background-image: linear-gradient(120deg,#ffc289,#b2d4cc);
+  height: 1280px;
+
+}
+
